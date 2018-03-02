@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* background-color: #e9ecef; */
+}
+
+/* .container.bg-white {
+  padding: 20px 20px 50px 20px;
+} */
+
+.bg-main {
+  background-color: #00796b;
+  border-color: #005b50;
+}
+
+.bg-sub {
+  background-color: #005b50;
+}
+
+.modal-header {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.modal-footer {
+  background-color: #e9ecef;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+label {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #00796b;
+  font-variant: all-small-caps;
+}

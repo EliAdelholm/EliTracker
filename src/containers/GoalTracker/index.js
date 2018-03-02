@@ -65,7 +65,7 @@ class GoalTracker extends Component {
                             <h4 className="mb-1">Category Stats</h4>
                         </div>
                         <div className="card-body">
-                            <h2 className="display-1"></h2>
+                            <h2 className="display-1">s</h2>
                         </div>
                         <div className="card-footer text-muted">
                             2 days ago

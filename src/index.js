@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import './core.css';
 
 // Import Views
 import Home from './containers/Home'
@@ -13,7 +15,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <Router>
-        <div>
+        <div id="elitracker">
             <Route exact path="/" component={Home} />
             <Route path="/work-tracker" component={WorkTracker} />
             <Route path="/grade-tracker" component={GradeTracker} />
