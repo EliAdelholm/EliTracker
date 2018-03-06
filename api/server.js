@@ -3,29 +3,35 @@ var app = express()
 var chalk = require('chalk')
 global.gFs = require('fs')
 
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 
 global.gLog = (sStatus, sMessage) => {
 
-    switch(sStatus) {
+    switch (sStatus) {
         case 'ok':
             console.log(chalk.green(sMessage))
-        break
+            break
         case 'err':
             console.log(chalk.red(sMessage))
-        break
+            break
         case 'ex':
             console.log(chalk.magenta(sMessage))
-        break
+            break
         case 'info':
             console.log(sMessage)
-        break
+            break
     }
 }
 
 var work = require('./controllers/work.js')
 
 app.get('/work', (req, res) => {
-    work.getCurrentPeriod( (err, jStatus, jWorkData) => {
+    work.getCurrentPeriod((err, jStatus, jWorkData) => {
         if (err) {
             gLog('err', jStatus)
             return res.json(jStatus)

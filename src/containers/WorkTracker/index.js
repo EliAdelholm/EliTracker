@@ -1,6 +1,9 @@
 // Dependencies
 import React, { Component } from 'react'
 import moment from 'moment'
+import { connect } from 'react-redux'
+
+import * as WorkActions from '../../actions/workActionCreator';
 
 // Global components
 import Navbar from '../../components/Navbar'
@@ -69,9 +72,42 @@ class WorkTracker extends Component {
         }
     };
 
-    componentDidMount = () => {
+    async componentDidMount() {
+        const { onRequestWork } = this.props
+
+        try {
+            await onRequestWork();
+
+        } catch (err) {
+            console.error(err);
+        }
         this.getPeriod()
     }
+
+//     async componentDidMount() {
+//         const {onRequestRestaurants, onRequestUserData, onRequestAllRestaurantTables} = this.props;
+
+//         try {
+//             await onRequestUserData();
+//             await onRequestAllRestaurantTables();
+//             await onRequestRestaurants();
+
+//         } catch (err) {
+//             console.error(err);
+//         }
+
+//         const [user] = this.props.user;
+//         const {restaurants} = this.props;
+//         this.setState({
+//             isWaitingFor: user.acf.waiting_for,
+//             favourites: user.acf.favourites,
+//             restaurants: restaurants,
+//             restaurantsPrice: restaurants.slice(),
+//             restaurantsAZ: restaurants.slice(),
+//             restaurantsNearby: restaurants.slice(),
+//             activeFilter: position? "Nearby" : "A-Z",
+//         })
+// }
 
 
     getPeriod = () => {
@@ -207,4 +243,9 @@ class WorkTracker extends Component {
     }
 }
 
-export default WorkTracker;
+// export default WorkTracker;
+export default connect((state) => ({
+    jobs: Object.values(state.jobs),
+}), {
+    onRequestWork: WorkActions.fetchWorkData,
+})(WorkTracker);
