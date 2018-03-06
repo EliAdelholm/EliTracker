@@ -18,16 +18,20 @@ class WorkTracker extends Component {
             tax: 0.36
         },
         scheduled: [
-            { id: 5, date: "2018-03-05", from: "09:00", to: "16:00", hours: 7, rate: 135 },
             { id: 6, date: "2018-03-07", from: "09:00", to: "16:00", hours: 7, rate: 135 },
             { id: 7, date: "2018-03-12", from: "09:00", to: "16:00", hours: 7, rate: 135 },
             { id: 8, date: "2018-03-14", from: "09:00", to: "16:00", hours: 7, rate: 135 },
+            { id: 9, date: "2018-03-19", from: "09:00", to: "16:00", hours: 7, rate: 135 },
+            { id: 10, date: "2018-03-21", from: "09:00", to: "16:00", hours: 7, rate: 135 },
+            { id: 11, date: "2018-03-26", from: "09:00", to: "16:00", hours: 7, rate: 135 },
+            { id: 12, date: "2018-03-28", from: "09:00", to: "16:00", hours: 7, rate: 135 },
         ],
         hours: [
             { id: 1, date: "2018-02-19", from: "09:00", to: "16:00", hours: 7, rate: 135 },
             { id: 2, date: "2018-02-21", from: "09:00", to: "16:30", hours: 7.5, rate: 135 },
             { id: 3, date: "2018-02-26", from: "09:00", to: "16:15", hours: 7.25, rate: 135 },
-            { id: 4, date: "2018-02-28", from: "08:30", to: "13:30", hours: 5, rate: 135 }
+            { id: 4, date: "2018-02-28", from: "08:30", to: "13:30", hours: 5, rate: 135 },
+            { id: 5, date: "2018-03-05", from: "08:30", to: "16:45", hours: 8.25, rate: 135 },
         ],
         hourLog: {
             "February 2018": {

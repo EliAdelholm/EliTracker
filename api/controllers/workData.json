@@ -1,0 +1,80 @@
+{
+   "jobs": [
+        {
+            "id": 1,
+            "company": "Mybanker",
+            "position": "Student Web Developer",
+            "startDate": "2018-03-05",
+            "endDate": null,
+            "rate": 135,
+            "periods": [
+                {
+                    "id": 1,
+                    "name": "March 2018",
+                    "startDate": "2018-02-16",
+                    "endDate": "2018-03-15",
+                    "scheduledHours": [
+                        {
+                            "id": 6,
+                            "date": "2018-03-07",
+                            "startTime": "09:00",
+                            "endTime": "16:00",
+                            "hours": 7
+                        },
+                        {
+                            "id": 7,
+                            "date": "2018-03-12",
+                            "startTime": "09:00",
+                            "endTime": "16:00",
+                            "hours": 7
+                        },
+                        {
+                            "id": 8,
+                            "date": "2018-03-14",
+                            "startTime": "09:00",
+                            "endTime": "16:00",
+                            "hours": 7
+                        }
+                    ],
+                    "loggedHours": [
+                        {
+                            "id": 1,
+                            "date": "2018-02-19",
+                            "startTime": "09:00",
+                            "endTime": "16:00",
+                            "hours": 7
+                        },
+                        {
+                            "id": 2,
+                            "date": "2018-02-21",
+                            "startTime": "09:00",
+                            "endTime": "16:30",
+                            "hours": 7.5
+                        },
+                        {
+                            "id": 3,
+                            "date": "2018-02-26",
+                            "startTime": "09:00",
+                            "endTime": "16:15",
+                            "hours": 7.25
+                        },
+                        {
+                            "id": 4,
+                            "date": "2018-02-28",
+                            "startTime": "08:30",
+                            "endTime": "13:30",
+                            "hours": 5
+                        },
+                        {
+                            "id": 5,
+                            "date": "2018-03-05",
+                            "startTime": "08:30",
+                            "endTime": "16:45",
+                            "hours": 8.25
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
