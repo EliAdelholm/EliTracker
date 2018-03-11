@@ -30,7 +30,7 @@ global.gLog = (sStatus, sMessage) => {
 
 var work = require('./controllers/work.js')
 
-app.get('/work', (req, res) => {
+app.get('/jobs', (req, res) => {
     work.getCurrentPeriod((err, jStatus, jWorkData) => {
         if (err) {
             gLog('err', jStatus)

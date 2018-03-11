@@ -8,9 +8,9 @@ const addJob = (jobs = {}) => ({
     payload: jobs,
 });
 
-export const fetchWorkData = () => {
+export const fetchJobs = () => {
     return async (dispatch) => {
-        const response = await WorkService.fetchWorkDataAsync();
+        const response = await WorkService.fetchJobsAsync();
 
         dispatch(batchActions([
             addJob(response.entities.jobs),

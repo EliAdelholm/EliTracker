@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import moment from 'moment'
 
 class Create extends Component {
-    state = { date: moment().format("YYYY-MM-DD"), start: "09:00", end: "16:00", rate: this.props.rate }
+    state = { date: moment().format("YYYY-MM-DD"), start: "09:00", end: "16:00" }
 
     handleInput = (e) => {
         const value = e.target.value;
@@ -21,19 +21,19 @@ class Create extends Component {
     }
 
     render() {
-        let { date, start, end, rate } = this.state;
+        let { date, start, end } = this.state;
 
         return (
             <div className="modal fade" id="logHoursModal" tabIndex="-1" role="dialog" aria-labelledby="logHoursModalTitle" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
-                        <div className="modal-header bg-main text-white">
+                        <div className="modal-header bg-info border-bottom-0">
                             <h5 className="modal-title" id="exampleModalLongTitle">Log hours</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close" style={{ color: "white" }}>
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div className="modal-body">
+                        <div className="modal-body bg-accent">
                             <form>
                                 <div className="form-group">
                                     <label>Date</label>
@@ -47,15 +47,6 @@ class Create extends Component {
                                     <div className="form-group col-6">
                                         <label>End</label>
                                         <input type="time" className="form-control" name="end" value={end} onChange={this.handleInput} />
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <label>Rate</label>
-                                    <div className="input-group mb-3">
-                                        <input type="text" className="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" name="rate" value={rate} onChange={this.handleInput} />
-                                        <div className="input-group-append">
-                                            <span className="input-group-text" id="basic-addon2">DKK</span>
-                                        </div>
                                     </div>
                                 </div>
                             </form>

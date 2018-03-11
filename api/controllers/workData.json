@@ -1,79 +1,178 @@
-
- [
-        {
-            "id": 1,
-            "company": "Mybanker",
-            "position": "Student Web Developer",
-            "startDate": "2018-03-05",
-            "endDate": null,
-            "rate": 135,
-            "periods": [
-                {
-                    "id": 1,
-                    "name": "March 2018",
-                    "startDate": "2018-02-16",
-                    "endDate": "2018-03-15",
-                    "scheduledHours": [
-                        {
-                            "id": 6,
-                            "date": "2018-03-07",
-                            "startTime": "09:00",
-                            "endTime": "16:00",
-                            "hours": 7
-                        },
-                        {
-                            "id": 7,
-                            "date": "2018-03-12",
-                            "startTime": "09:00",
-                            "endTime": "16:00",
-                            "hours": 7
-                        },
-                        {
-                            "id": 8,
-                            "date": "2018-03-14",
-                            "startTime": "09:00",
-                            "endTime": "16:00",
-                            "hours": 7
-                        }
-                    ],
-                    "loggedHours": [
-                        {
-                            "id": 1,
-                            "date": "2018-02-19",
-                            "startTime": "09:00",
-                            "endTime": "16:00",
-                            "hours": 7
-                        },
-                        {
-                            "id": 2,
-                            "date": "2018-02-21",
-                            "startTime": "09:00",
-                            "endTime": "16:30",
-                            "hours": 7.5
-                        },
-                        {
-                            "id": 3,
-                            "date": "2018-02-26",
-                            "startTime": "09:00",
-                            "endTime": "16:15",
-                            "hours": 7.25
-                        },
-                        {
-                            "id": 4,
-                            "date": "2018-02-28",
-                            "startTime": "08:30",
-                            "endTime": "13:30",
-                            "hours": 5
-                        },
-                        {
-                            "id": 5,
-                            "date": "2018-03-05",
-                            "startTime": "08:30",
-                            "endTime": "16:45",
-                            "hours": 8.25
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+[
+    {
+        "id": 1,
+        "company": "Mybanker",
+        "position": "Student Web Developer",
+        "startDate": "2018-03-05",
+        "endDate": null,
+        "rate": 135,
+        "periods": [
+            {
+                "id": 2,
+                "name": "April 2018",
+                "startDate": "2018-02-16",
+                "endDate": "2018-03-15",
+                "scheduledHours": [
+                    {
+                        "id": 7,
+                        "date": "2018-03-12",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    },
+                    {
+                        "id": 8,
+                        "date": "2018-03-14",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    }
+                ],
+                "loggedHours": [
+                    {
+                        "id": 1,
+                        "date": "2018-02-19",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    },
+                    {
+                        "id": 2,
+                        "date": "2018-02-21",
+                        "startTime": "09:00",
+                        "endTime": "16:30",
+                        "hours": 7.5
+                    },
+                    {
+                        "id": 3,
+                        "date": "2018-02-26",
+                        "startTime": "09:00",
+                        "endTime": "16:15",
+                        "hours": 7.25
+                    },
+                    {
+                        "id": 4,
+                        "date": "2018-02-28",
+                        "startTime": "08:30",
+                        "endTime": "13:30",
+                        "hours": 5
+                    },
+                    {
+                        "id": 5,
+                        "date": "2018-03-05",
+                        "startTime": "08:30",
+                        "endTime": "16:45",
+                        "hours": 8.25
+                    },
+                    {
+                        "id": 6,
+                        "date": "2018-03-07",
+                        "startTime": "08:45",
+                        "endTime": "15:15",
+                        "hours": 6.5
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "March 2018",
+                "startDate": "2018-01-16",
+                "endDate": "2018-02-15",
+                "scheduledHours": [],
+                "loggedHours": [
+                    {
+                        "id": 1,
+                        "date": "2018-01-19",
+                        "startTime": "09:00",
+                        "endTime": "15:30",
+                        "hours": 6.5
+                    },
+                    {
+                        "id": 2,
+                        "date": "2018-01-22",
+                        "startTime": "09:00",
+                        "endTime": "15:30",
+                        "hours": 6.5
+                    },
+                    {
+                        "id": 3,
+                        "date": "2018-01-23",
+                        "startTime": "09:00",
+                        "endTime": "14:30",
+                        "hours": 5.5
+                    },
+                    {
+                        "id": 4,
+                        "date": "2018-01-24",
+                        "startTime": "09:00",
+                        "endTime": "15:30",
+                        "hours": 6.5
+                    },
+                    {
+                        "id": 5,
+                        "date": "2018-01-26",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    },
+                    {
+                        "id": 6,
+                        "date": "2018-01-29",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    },
+                    {
+                        "id": 7,
+                        "date": "2018-01-30",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    },
+                    {
+                        "id": 8,
+                        "date": "2018-01-31",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    },
+                    {
+                        "id": 9,
+                        "date": "2018-02-05",
+                        "startTime": "09:00",
+                        "endTime": "15:00",
+                        "hours": 6
+                    },
+                    {
+                        "id": 10,
+                        "date": "2018-02-06",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    },
+                    {
+                        "id": 11,
+                        "date": "2018-02-07",
+                        "startTime": "08:45",
+                        "endTime": "15:45",
+                        "hours": 7
+                    },
+                    {
+                        "id": 12,
+                        "date": "2018-02-12",
+                        "startTime": "09:45",
+                        "endTime": "16:00",
+                        "hours": 6.25
+                    },
+                    {
+                        "id": 13,
+                        "date": "2018-02-14",
+                        "startTime": "09:00",
+                        "endTime": "16:45",
+                        "hours": 6.75
+                    }
+                ]
+            }
+        ]
+    }
+]

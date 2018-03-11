@@ -1,21 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* background-color: #e9ecef; */
+  background-color: #263238;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
+  color: white;
 }
 
-/* .container.bg-white {
-  padding: 20px 20px 50px 20px;
-} */
+.card {
+  border: none;
+}
 
 .bg-main {
-  background-color: #00796b;
-  border-color: #005b50;
+  background-color: #062F4F;
 }
 
-.bg-sub {
-  background-color: #005b50;
+.bg-gradient {
+  background: linear-gradient(#062F4F, #263238);
+}
+
+.bg-info {
+  background-color: #882601 !important;
+}
+
+.bg-success {
+  background-color: #133a54 !important;
+  /* background-color: #00796b !important; */
+  /* background-color: #813772 !important; */
+}
+
+.bg-accent {
+  background-color: #353f45;
 }
 
 .modal-header {
@@ -24,13 +42,12 @@ body {
 }
 
 .modal-footer {
-  background-color: #e9ecef;
+  background-color: #263238;
   border: 1px solid rgba(0,0,0,.125);
 }
 
-label {
-  margin-bottom: 0;
-  font-weight: bold;
-  color: #00796b;
-  font-variant: all-small-caps;
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: white;
+  background-color: #263238;
+  border-color: #dee2e6 #dee2e6 #263238;
 }

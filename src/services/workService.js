@@ -5,15 +5,14 @@ import Schemas from './Schemas';
 import { convertToJson } from '../helpers/ServiceHelper';
 
 
-export const fetchWorkDataAsync = async () => {
-    const response = await fetch(`http://localhost:3001/work`, {
+export const fetchJobsAsync = async () => {
+    const response = await fetch(`http://localhost:3001/jobs`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
         }
     });
     const responseData = await convertToJson(response);
-    console.log(responseData)
 
     return Schemas.normalize(responseData, [Schemas.job]);
 };
