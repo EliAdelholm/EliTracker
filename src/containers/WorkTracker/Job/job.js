@@ -39,6 +39,7 @@ class Job extends Component {
         const value = Number(e.target.value);
         const periodId = this.state.periods[value].id
         let periodHours = this.state.hourLogs.filter(x => x.periodId === periodId)
+        console.log(periodId)
 
         this.setState({
             showPeriod: value,
@@ -143,7 +144,7 @@ class Job extends Component {
                                     </div>
 
                                     <div className="col-12">
-                                        <LoggedHours hours={periodHours} onViewAddHours={this.props.onViewAddHours}/>
+                                        <LoggedHours hours={periodHours} onViewAddHours={() => this.props.onViewAddHours(periods[showPeriod].id, 'true')}/>
                                     </div>
 
                                 </div>
@@ -161,7 +162,7 @@ class Job extends Component {
                                     </div>
 
                                     <div className="col-12">
-                                        <ScheduledHours hours={periodHours} onViewAddHours={this.props.onViewAddHours} />
+                                        <ScheduledHours hours={periodHours} onViewAddHours={() => this.props.onViewAddHours(periods[showPeriod].id, 'false')} />
                                     </div>
 
                                 </div>

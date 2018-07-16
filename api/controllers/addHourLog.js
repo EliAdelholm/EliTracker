@@ -2,11 +2,15 @@ const moment = require('moment')
 
 module.exports = function (req, res) {
     const data = req.body;
+    
+    // Format dates and calculate hours
+    data.startTime = moment(data.startTime).seconds(0).format('YYYY-MM-DD HH:mm:ss')
+    data.endTime = moment(data.endTime).seconds(0).format('YYYY-MM-DD HH:mm:ss')
     data.hours = moment(data.endTime).diff(moment(data.startTime), 'hours', true)
 
-    data.startTime = moment(data.startTime).format('YYYY-MM-DD HH:mm:ss')
-    data.endTime = moment(data.endTime).format('YYYY-MM-DD HH:mm:ss')
     data.periodId = Number(data.periodId)
+
+    console.log(data.startTime)
 
     const sQuery = "INSERT INTO workHours VALUES( ?, ?, ?, ?, ?, ?, ? )"
     const aData = [null, data.periodId, data.startTime, data.endTime, data.hours, data.logged, data.jobId]

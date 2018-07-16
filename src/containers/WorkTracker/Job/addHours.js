@@ -13,10 +13,10 @@ class AddHours extends Component {
     state = { 
         form: {
             jobId: this.props.jobId, 
-            periodId: '', 
-            startTime: moment(), 
-            endTime: moment(), 
-            logged: 'true'
+            periodId: this.props.period, 
+            startTime: moment().hours(8).minutes(30), 
+            endTime: moment().hours(16).minutes(0), 
+            logged: this.props.status
         },
         viewStartPicker: false,
         viewEndPicker: false,
@@ -24,6 +24,7 @@ class AddHours extends Component {
     };
 
     componentDidMount() {
+        console.log(this.props.status)
         this.setState({ periods: this.props.periods })
     }
 
@@ -37,12 +38,19 @@ class AddHours extends Component {
     }
 
     toggleDatePicker = (e) => {
-        const name = e.target.name
+        const name = e.target.name;
         this.setState({ [name]: !this.state[name] })
     }
 
     handleChange = m => {
-        this.setState({  m });
+        let startTimeDate = this.state.form.startTime.date()
+        let endDate = this.state.form.endTime
+
+        if(m.date() === startTimeDate) {
+            endDate.date(startTimeDate)
+        }
+        
+        this.setState({  m, form: { ...this.state.form, endTime: endDate} });
     };
 
     handleSubmit = () => {

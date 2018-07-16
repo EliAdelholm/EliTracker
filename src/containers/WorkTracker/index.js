@@ -10,7 +10,7 @@ import Job from './Job/job'
 import AddHours from './Job/addHours'
 
 class WorkTracker extends Component {
-    state = { view: 'Loading', jobId: null }
+    state = { view: 'Loading', jobId: null, addHourPeriod: null, addHourStatus: null }
 
     async componentDidMount() {
         const { onRequestJobs, onRequestPayPeriods, onRequestHourLogs } = this.props
@@ -46,13 +46,13 @@ class WorkTracker extends Component {
         this.setState({ view: 'Job', jobId: id })
     }
 
-    handleViewAddHours = () => {
-        this.setState({view: 'AddHours'})
+    handleViewAddHours = (period, status) => {
+        this.setState({view: 'AddHours', addHourPeriod: period, addHourStatus: status})
     }
 
 
     render() {
-        let {view, jobId} = this.state
+        let {view, jobId, addHourPeriod, addHourStatus} = this.state
 
         return (
             <div id="work-tracker">
@@ -65,11 +65,11 @@ class WorkTracker extends Component {
                 }
 
                 {view === 'Job' && jobId &&
-                    <Job jobId={jobId} onBack={this.handleViewList} onViewAddHours={this.handleViewAddHours}/>
+                    <Job jobId={jobId} onBack={this.handleViewList} onViewAddHours={(period, status) => this.handleViewAddHours(period, status)}/>
                 }
 
                 {view === 'AddHours' && jobId &&
-                    <AddHours onBack={this.handleViewJob} jobId={jobId} onSubmit={this.handleAddHours}/>
+                    <AddHours onBack={this.handleViewJob} jobId={jobId} period={addHourPeriod} status={addHourStatus} onSubmit={this.handleAddHours}/>
                 }
             </div>
         );
