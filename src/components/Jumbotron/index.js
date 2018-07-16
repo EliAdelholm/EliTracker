@@ -7,10 +7,10 @@ class Jumbotron extends Component {
         let { title, text } = this.props;
 
         return (
-            <div className="jumbotron jumbotron-fluid bg-gradient mb-0">
+            <div className="jumbotron jumbotron-fluid bg-contrast py-4 mb-4">
                 <div className="container">
-                    <h1>{title}</h1>
-                    <p>{text}</p>
+                    <h2 className="text-accent">{title}</h2>
+                    <h5>{text}</h5>
                 </div>
             </div>
         );

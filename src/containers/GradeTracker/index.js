@@ -16,7 +16,10 @@ class GradeTracker extends Component {
         grades: [
             { id: 1, course: "Web Development", program: "BA in Web Development", semester: "1st Semester", date: "2017-10-15", grade: 12 },
             { id: 2, course: "Interface Design", program: "BA in Web Development", semester: "1st Semester", date: "2017-12-21", grade: 10 },
-            { id: 3, course: "Databases", program: "BA in Web Development", semester: "1st Semester", date: "2018-01-18", grade: 12 }
+            { id: 3, course: "Databases", program: "BA in Web Development", semester: "1st Semester", date: "2018-01-18", grade: 12 },
+            { id: 4, course: "Angular Elective", program: "BA in Web Development", semester: "2nd Semester", date: "2018-06-04", grade: 12 },
+            { id: 5, course: "Development Environments", program: "BA in Web Development", semester: "2nd Semester", date: "2018-06-14", grade: 12 },
+            { id: 6, course: "Node Elective", program: "BA in Web Development", semester: "2nd Semester", date: "2018-06-18", grade: 12 }
         ]
     };
 

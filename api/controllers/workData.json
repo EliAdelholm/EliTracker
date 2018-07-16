@@ -13,20 +13,6 @@
                 "startDate": "2018-02-16",
                 "endDate": "2018-03-15",
                 "scheduledHours": [
-                    {
-                        "id": 7,
-                        "date": "2018-03-12",
-                        "startTime": "09:00",
-                        "endTime": "16:00",
-                        "hours": 7
-                    },
-                    {
-                        "id": 8,
-                        "date": "2018-03-14",
-                        "startTime": "09:00",
-                        "endTime": "16:00",
-                        "hours": 7
-                    }
                 ],
                 "loggedHours": [
                     {
@@ -70,6 +56,20 @@
                         "startTime": "08:45",
                         "endTime": "15:15",
                         "hours": 6.5
+                    },
+                    {
+                        "id": 7,
+                        "date": "2018-03-12",
+                        "startTime": "09:00",
+                        "endTime": "16:00",
+                        "hours": 7
+                    },
+                    {
+                        "id": 8,
+                        "date": "2018-03-14",
+                        "startTime": "09:00",
+                        "endTime": "14:00",
+                        "hours": 5
                     }
                 ]
             },

@@ -1,15 +1,18 @@
-var express = require('express')
-var app = express()
-var chalk = require('chalk')
+const express = require('express')
+const app = express()
+const sqlite = require('sqlite3')
+const chalk = require('chalk')
+const bodyParser = require('body-parser')
 global.gFs = require('fs')
 
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    next()
+})
 
 
+global.gDb = new sqlite.Database(__dirname + '/db.db')
 global.gLog = (sStatus, sMessage) => {
 
     switch (sStatus) {
@@ -28,18 +31,12 @@ global.gLog = (sStatus, sMessage) => {
     }
 }
 
-var work = require('./controllers/work.js')
+// Use BodyParser
+app.use(bodyParser.json({limit: '50mb'}))
 
-app.get('/jobs', (req, res) => {
-    work.getCurrentPeriod((err, jStatus, jWorkData) => {
-        if (err) {
-            gLog('err', jStatus)
-            return res.json(jStatus)
-        }
-        gLog(jStatus)
-        return res.json(jWorkData)
-    })
-})
+// API routes
+const apiRoutes = require('./api/routes');
+app.use('/api', apiRoutes);
 
 app.listen(3001, err => {
     if (err) {
